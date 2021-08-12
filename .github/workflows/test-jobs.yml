@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: test-jobs
 
 # Controls when the workflow will run
 on:
@@ -34,6 +34,7 @@ jobs:
   job3:
     runs-on: ubuntu-latest
     needs: job2
+    if: always()
     steps:
       - run: echo "je m'exécute quoi qu'il arrive"
     
